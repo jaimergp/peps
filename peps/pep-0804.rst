@@ -854,11 +854,11 @@ following:
     # show all external dependencies, but mapped to the autodetected ecosystem
     $ python -m pyproject_external show --output=mapped .
     [external]
-    build_requires = [
+    build-requires = [
         "g++",
         "python3",
     ]
-    host_requires = [
+    build-host-requires = [
         "zlib1g",
         "zlib1g-dev",
     ]
