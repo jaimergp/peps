@@ -1295,6 +1295,46 @@ the following alternatives are proposed:
     one is available, this option enriches the set of options without
     complete overrides.
 
+So, for example, given a package with this ``external`` table:
+
+.. code-block:: toml
+
+  [external]
+  build-requires = [
+    "dep:virtual/compiler/c",
+  ]
+  host-requires = [
+    "dep:generic/libffi",
+  ]
+
+And a target ecosystem that maps ``dep:virtual/compiler/c`` to ``gcc``
+but ``clang`` is preferred, the following mapping override could be provided:
+
+.. code-block:: json
+
+  {
+    "$schema": "https://raw.githubusercontent.com/jaimergp/external-metadata-mappings/main/schemas/external-mapping.schema.json",
+    "schema_version": 1,
+    "name": "ecosystem override",
+    "description": "Mapping override for my ecosystem of choice",
+    "mappings": [
+      {
+        "id": "dep:virtual/compiler/c",
+        "description": "Clang override",
+        "specs": "clang"
+      }
+    ]
+  }
+
+Then, it would be used like this (CLI flags not determined yet):
+
+.. code-block:: shell
+
+  $ python -m my-tool show \
+      sdist/cryptography-46.0.2.tar.gz \
+      --output install-command \
+      --patch-mapping=my-override.mapping.json
+
 Open Issues
 ===========
 
