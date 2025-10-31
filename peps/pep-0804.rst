@@ -284,10 +284,18 @@ Ecosystem identifiers
 
 The identifier MUST conform to this regex: ``[a-z0-9\-_.]+(\+[a-z0-9\-_.])?``.
 In other words, a first field optionally followed by a second, separated
-by a ``+`` symbol. For ecosystems corresponding to Linux distributions,
+by a ``+`` symbol.
+
+For ecosystems corresponding to Linux distributions,
 the first field MUST correspond to the ``ID`` string as specified in the
 `os-release <https://www.freedesktop.org/software/systemd/man/latest/os-release.html>`__
 specification. When available, the second field MUST be the ``VERSION_ID`` string.
+
+.. note::
+
+  This naming rule implies that mapping maintainers can and should version
+  their mappings, especially if package names are prone to changing (e.g.
+  packages that encode their SONAME in Linux distributions).
 
 The complete filename MUST be ``{identifier}.mapping.json``.
 
