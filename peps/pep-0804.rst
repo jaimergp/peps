@@ -279,8 +279,8 @@ The list of known ecosystems has two roles:
 1. Reporting the canonical URL for its mapping.
 2. Assigning a unique, short identifier to each ecosystem.
 
-The chosen identifier MUST be used in the mapping filenames mentioned above so they can be
-found in the local filesystem.
+Ecosystem identifiers
+^^^^^^^^^^^^^^^^^^^^^
 
 The identifier MUST conform to this regex: ``[a-z0-9\-_.]+(\+[a-z0-9\-_.])?``.
 In other words, a first field optionally followed by a second, separated
@@ -289,13 +289,30 @@ the first field MUST correspond to the ``ID`` string as specified in the
 `os-release <https://www.freedesktop.org/software/systemd/man/latest/os-release.html>`__
 specification. When available, the second field MUST be the ``VERSION_ID`` string.
 
+The complete filename MUST be ``{identifier}.mapping.json``.
+
 Some examples:
 
-- Fedora 40: ``fedora+40.json``.
-- Ubuntu 24.04: ``ubuntu+24.04.json``.
-- Homebrew: ``homebrew.json``
-- VCPkg: ``vcpkg.json``
-- conda-forge: ``conda-forge.json``
+.. list-table::
+
+    * - Ecosystem
+      - Identifier
+      - Filename
+    * - Fedora 40
+      - ``fedora+40``
+      - ``fedora+40.mapping.json``
+    * - Fedora 40
+      - ``fedora+40``
+      - ``fedora+40.mapping.json``
+    * - Ubuntu 24.04
+      - ``ubuntu+24.04``
+      - ``ubuntu+24.04.mapping.json``
+    * - Homebrew
+      - ``homebrew``
+      - ``homebrew.mapping.json``
+    * - conda-forge
+      - ``conda-forge``
+      - ``conda-forge.mapping.json``
 
 Schema details
 --------------
@@ -416,7 +433,7 @@ The known ecosystems list is specified by the following
     * - Required
       - True
 
-This dictionary maps non-empty string keys referring to the ecosystem identifiers
+This dictionary maps non-empty string keys referring to the ecosystem *identifiers*
 to a sub-dictionary defined as:
 
 .. list-table::
