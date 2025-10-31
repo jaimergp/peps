@@ -277,6 +277,26 @@ contain mapping documents named ``{ecosystem-identifier}.mapping.json``. The cen
 registry and known ecosystem documents MAY also be distributed in this directory,
 as ``registry.json`` and ``known-ecosystems.json``, respectively.
 
+.. note::
+
+  The ``specifier_syntax`` mappings are meant to provide interoperability between
+  ecosystems where choosing which package version to install is possible. For
+  example, this is not the case in many Linux distributions, where each distro
+  release commits to a package version during its lifecycle (although often
+  with the necessary security backports).
+
+  In these cases, the ``install`` command could be used, optimistically, in
+  "name-only" mode, hoping that the OS-provided version is a good fit. A more
+  pessimistic alternative would be to use the ``query`` command first to see if
+  the available version matches the project constraints, and then install the
+  package by name.
+
+  Even in those cases, perfect 1:1 version matching is not always possible due to how
+  different ecosystems map upstream releases to repackaged versions (e.g. the epoch
+  had to be bumped to accommodate a change of release schema). In that regard, we do
+  not encode explicit mapping semantics for epochs or pre-releases.
+
+
 Known ecosystems
 ----------------
 
