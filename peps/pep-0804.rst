@@ -1269,10 +1269,12 @@ A cursory online search for cross-ecosystem databases of packages would reveal
 different sets of results close to the needs of this proposal, but not quite there.
 For example:
 
-- Some solutions only focused on Linux distributions or Unix systems, like Repology_ or pkgs.org.
-- Other services like Libraries.io were password protected.
-- Other providers like ecosyste.ms were only available via APIs.
-- PURLDb only focused on collecting concrete PURLs (which identify specific package artifacts),
+- Some solutions only focus on Linux distributions or Unix systems,
+  like Repology_ or `pkgs.org <https://pkgs.org>`__.
+- Other services like `Libraries.io <https://libraries.io>`` require a login.
+- Other providers like `ecosyste.ms <https://ecosyste.ms>`` are only available via APIs.
+- The service `purldb <https://github.com/aboutcode-org/purldb>`__ only focuses
+  on collecting concrete PURLs (which identify specific package artifacts),
   instead of abstract PURLs concerned with identifying input requirements.
 
 The proposed mappings try to be as lightweight as possible, without
