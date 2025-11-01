@@ -1284,7 +1284,9 @@ of static JSON files that can be easily updated and distributed online and offli
 If in the future a service exists providing the following features, then it would
 be a strong contender for superseding this PEP:
 
-- Provides mappings between source PURLs and their repackaged counterparts.
+- Provides mappings between source DepURLs, PURLs and their repackaged counterparts.
+  This implies that PURLs have gained the notion of virtual packages and ergonomic
+  version range expressions.
 - Can generate package manager instructions for a given input PURL.
 - Can be distributed as local artifacts for offline consumption.
 - Does not require a live server or an API.
