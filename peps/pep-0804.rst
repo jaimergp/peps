@@ -1271,8 +1271,8 @@ For example:
 
 - Some solutions only focus on Linux distributions or Unix systems,
   like Repology_ or `pkgs.org <https://pkgs.org>`__.
-- Other services like `Libraries.io <https://libraries.io>`` require a login.
-- Other providers like `ecosyste.ms <https://ecosyste.ms>`` are only available via APIs.
+- Other services like `Libraries.io <https://libraries.io>`__ require a login.
+- Other providers like `ecosyste.ms <https://ecosyste.ms>`__ are only available via APIs.
 - The service `purldb <https://github.com/aboutcode-org/purldb>`__ only focuses
   on collecting concrete PURLs (which identify specific package artifacts),
   instead of abstract PURLs concerned with identifying input requirements.
