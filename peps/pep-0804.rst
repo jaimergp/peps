@@ -1278,8 +1278,8 @@ date fields (such as ``valid_from`` and ``valid_to``), but the authors decided t
 this idea. It adds complexity to the implementation, it is difficult to maintain up-to-date,
 and doesn't add value to the end-user, simply serving as a historical record.
 
-Instead, we suggest that versioned distributions maintain a separate mapping per-release
-(see the proposed mapping naming schemes). Non-versioned ecosystems should strive to keep
+Instead, we expect that versioned distributions maintain a separate mapping per release
+(see the proposed mapping naming schemes). Rolling ecosystems should strive to keep
 alias packages around, with deprecation warnings if needed and feasible. In general, we
 also recommend keeping the mapping files under public version control so end-users
 can refer to older versions if necessary.
