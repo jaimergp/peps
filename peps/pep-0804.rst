@@ -304,15 +304,18 @@ Some examples:
     * - Ecosystem
       - Identifier
       - Filename
-    * - Fedora 40
-      - ``fedora+40``
-      - ``fedora+40.mapping.json``
+    * - Debian Bookworm
+      - ``debian+12``
+      - ``debian+12.mapping.json``
     * - Fedora 40
       - ``fedora+40``
       - ``fedora+40.mapping.json``
     * - Ubuntu 24.04
       - ``ubuntu+24.04``
       - ``ubuntu+24.04.mapping.json``
+    * - Arch Linux (rolling)
+      - ``arch``
+      - ``arch.mapping.json``
     * - Homebrew
       - ``homebrew``
       - ``homebrew.mapping.json``
