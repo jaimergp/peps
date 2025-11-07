@@ -289,13 +289,11 @@ by a ``+`` symbol.
 For ecosystems corresponding to Linux distributions,
 the first field MUST correspond to the ``ID`` string as specified in the
 `os-release <https://www.freedesktop.org/software/systemd/man/latest/os-release.html>`__
-specification. When available, the second field MUST be the ``VERSION_ID`` string.
+specification. If provided, the second field MUST correspond to the
+``VERSION_ID`` string if relevant.
 
-.. note::
-
-  This naming rule implies that mapping maintainers can and should version
-  their mappings, especially if package names are prone to changing (e.g.
-  packages that encode their SONAME in Linux distributions).
+Since the version field is optional, tools SHOULD try to access the versioned
+identifier but fallback to the name-only identifier if not found.
 
 The complete filename MUST be ``{identifier}.mapping.json``.
 
