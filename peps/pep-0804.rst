@@ -645,7 +645,7 @@ Each entry in this list is defined as a dictionary with these fields:
 
             -  ``never``, default in ``query``.
 
-        Exactly one of the ``command`` items MUST be the ``{specifiers}`` placeholder,
+        Exactly one of the ``command`` items MUST be the ``{}`` placeholder,
         which will be replaced by the mapped package specifier(s). The
         ``install`` command SHOULD support the placeholder being replaced by
         multiple specifiers, ``query`` MUST only receive a single specifier
