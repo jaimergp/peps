@@ -141,8 +141,7 @@ instructions for its external build dependencies (C/C++/Fortran compilers,
 OpenBLAS, pkg-config):
 
 - Debian/Ubuntu: ``sudo apt install -y gcc g++ gfortran libopenblas-dev liblapack-dev pkg-config python3-pip python3-dev``
-- Fedora: ``sudo dnf install gcc-gfortran python3-devel openblas-devel lapack-devel pkgconfig``
-- CentOS/RHEL: ``sudo yum install gcc-gfortran python3-devel openblas-devel lapack-devel pkgconfig``
+- Fedora/CentOS/RHEL: ``sudo dnf install gcc-gfortran python3-devel openblas-devel lapack-devel pkgconfig``
 - Arch Linux: ``sudo pacman -S gcc-fortran openblas pkgconf``
 - Homebrew on macOS: ``brew install gfortran openblas pkg-config``
 
