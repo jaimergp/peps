@@ -78,6 +78,11 @@ is simply ``black``, not ``python3-black``), and variants for different Python v
 but ``python3.11-setuptools`` and ``python3.12-setuptools`` are also available). More details
 are available in `Fedora's packaging guidelines for Python <https://docs.fedoraproject.org/en-US/packaging-guidelines/Python/#_naming>`__.
 
+Debian packages typically follow a ``f"python3-{import_name}"`` naming scheme, with some
+exceptions: some sub-communities have an infix (e.g., Django packages go under
+``f"python3-django-*"``), and applications are often distributed by their name, with no
+``python3-`` prefix. Additional details are available in `Debian's Python Policy <https://www.debian.org/doc/packaging-manuals/python-policy/#module-package-names>`__.
+
 Gentoo follows a similar approach to naming Python packages, using the ``dev-python/``
 category and some `well-specified rules <https://projects.gentoo.org/python/guide/package-maintenance.html>`__.
 
